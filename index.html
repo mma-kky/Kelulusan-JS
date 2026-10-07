@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Nomor 1</title>
+</head>
+<body>
+    <script>
+        var nama = "";
+        var tugas;
+        var uts;
+        var uas;
+
+        let inputNama = prompt("Masukkan nama Anda:");
+        nama = inputNama;
+
+        let inputTugas = prompt("Masukkan nilai Tugas (0-100):");
+        tugas = parseFloat(inputTugas);
+        let inputUTS = prompt("Masukkan nilai UTS (0-100):");
+        uts = parseFloat(inputUTS);
+        let inputUAS = prompt("Masukkan nilai UAS (0-100):");
+        uas = parseFloat(inputUAS);
+
+
+
+        var nilaiAkhir = (tugas * 30 / 100) +
+                        (uts * 30 / 100) +
+                        (uas * 40 / 100);
+
+        console.log("<h1>Hasil Penilaian Soal 1</h1>");
+        console.log("<p>Nama = " + nama + "</p>");                
+        console.log("Nilai Tugas = " + tugas); 
+        console.log("Nilai UTS = " + uts);
+        console.log("Nilai UAS = " + uas);
+        console.log("Nilai Akhir = " + nilaiAkhir);
+
+        if (nilaiAkhir >= 75) {
+            console.log("LULUS");
+        } else {
+            console.log("TIDAK LULUS");
+        }
+
+        document.write("<h1>Hasil Penilaian Soal 1</h1>");
+        document.write("<p>Nama = " + nama + "</p>");
+        document.write("<p>Nilai Tugas = " + tugas + "</p>");
+        document.write("<p>Nilai UTS = " + uts + "</p>");
+        document.write("<p>Nilai UAS = " + uas + "</p>");
+        document.write("<p>Nilai Akhir = " + nilaiAkhir + "</p>");
+
+        if (nilaiAkhir >= 75) {
+            document.write("<p>LULUS</p>");
+        } else {
+            document.write("<p>TIDAK LULUS</p>");
+        }
+    </script>
+</body>
+</html>
